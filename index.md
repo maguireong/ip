@@ -1,37 +1,142 @@
-## Welcome to GitHub Pages
+# User Guide
+Duke is a desktop app for managing tasks such as todo, deadlines and events, 
+optimized for use via a Command Line Interface (CLI) while having the benefits of a Graphical User Interface (GUI).
+With minimal typing, Duke can manage your task faster than traditional GUI apps.
 
-You can use the [editor on GitHub](https://github.com/maguireong/ip/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Features 
+1. Add todos : `todo`
+2. Add deadlines : `deadline`
+3. Add events : `event`
+4. Mark tasks as done : `done`
+5. List all tasks : `list`
+6. Delete task : `delete`
+7. Locating keywords in the task list : `find`
+8. List all tags : `tags`
+9. Exit the application : `bye`
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Usage
 
-### Markdown
+### `todo` - Adds a todo task
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Adds a todo task to the task list & prints the added task
 
-```markdown
-Syntax highlighted code block
+Example of usage: 
 
-# Header 1
-## Header 2
-### Header 3
+`todo read book`
 
-- Bulleted
-- List
+Expected outcome:
 
-1. Numbered
-2. List
+`Got it. I've added this task:
+   [T][?] borrow book
+ Now you have 1 tasks in the list.`
 
-**Bold** and _Italic_ and `Code` text
+### `deadline` - Adds a deadline task
 
-[Link](url) and ![Image](src)
-```
+Adds a deadline task to the task list & prints the added task
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Example of usage: 
 
-### Jekyll Themes
+`deadline return book /by 2019-10-15`
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/maguireong/ip/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Expected outcome:
 
-### Support or Contact
+`Got it. I've added this task:
+    [D][?] return book (by: Oct 15 2019)
+Now you have 2 tasks in the list.`
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### `event` - Adds an event task
+
+Adds an event task to the task list & prints the added task
+
+Example of usage: 
+
+`event project meeting /at 2010-08-17`
+
+Expected outcome:
+
+`Got it. I've added this task:
+   [E][?] project meeting (at: Aug 17 2010)
+ Now you have 3 tasks in the list.`
+ 
+### `done` - Marks a task as done
+ 
+Marks a task as done
+
+Example of usage: 
+
+`done 1`
+
+Expected outcome:
+
+`Nice! I've marked this task as done:
+    [?] return book
+Here are the tasks in your list:`
+  
+### `list` - List all tasks
+   
+List all tasks in the task list
+
+Example of usage: 
+
+`list`
+
+Expected outcome:
+
+`Here are the tasks in your list:
+1.[T][?] borrow book
+2.[D][?] return book (by: Oct 15 2019)
+3.[E][?] project meeting (at: Aug 17 2010)`
+    
+### `delete` - Deletes a task
+ 
+Deletes a task from the task list
+
+Example of usage: 
+
+`delete 1`
+
+Expected outcome:
+ 
+`Noted. I've removed this task:
+[D][?] return book (by: Oct 15 2019)
+Now you have 2 tasks in the list.`
+
+### `find` - Search for keywords
+
+Find tasks that matches the keywords being search and prints all tasks with the specified keyword
+
+Example of usage: 
+
+`find book`
+
+Expected outcome:
+
+`Noted. I've removed this task:
+  [D][?] return book (by: Oct 15 2019)
+Now you have 2 tasks in the list.`
+    
+ ### `tags` - List down the tags of each task
+
+Finds the tags of each task and list them down
+
+Example of usage: 
+
+`tags 1`
+
+Expected outcome:
+    
+Here are the tags in your list:
+ 1. `#cool`
+ 2. `#lovebooks`
+ 
+  ### `bye` - Exits the application
+ 
+ Greets the user goodbye and leaves the application
+ 
+ Example of usage: 
+ 
+ `bye`
+ 
+ Expected outcome:
+     
+ `Bye. Hope to see you again soon!`
