@@ -129,7 +129,7 @@ Here are the tags in your list:
  1. `#cool`
  2. `#lovebooks`
  
-  ### `bye` - Exits the application
+### `bye` - Exits the application
  
  Greets the user goodbye and leaves the application
  
